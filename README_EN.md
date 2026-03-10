@@ -17,6 +17,7 @@ English | [简体中文](README.md)
 
 ## 📖 Table of Contents
 
+- [🚀 Quick Start](#-quick-start)
 - [Why This Project](#why-this-project)
 - [Featured Projects](#-featured-projects)
 - [Development Tools](#️-development-tools)
@@ -27,6 +28,36 @@ English | [简体中文](README.md)
 - [Use Cases](#-use-cases)
 - [Community](#-community)
 - [Contributing](#-contributing)
+
+---
+
+## 🚀 Quick Start
+
+### For Contributors
+
+Welcome to contribute to this resource hub! You can:
+
+1. *⭐ Star this project* - Support us to keep updating
+2. *📝 Submit resources* - Share quality tools and tutorials you found
+3. *💬 Join discussions* - Share your experience in [Discussions](https://github.com/happydog-intj/awesome-chinese-ai-agents/discussions)
+4. *🐛 Report issues* - Found errors or outdated info? Submit an [Issue](https://github.com/happydog-intj/awesome-chinese-ai-agents/issues)
+
+Detailed contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### For Users
+
+*Beginner's Path*:
+1. Browse [Featured Projects](#-featured-projects) and choose a framework (LangChain or OpenClaw recommended)
+2. Check [Platform Integrations](#-platform-integrations) to learn how to integrate with WeChat/Douyin/etc
+3. Follow [Use Cases](#-use-cases) to learn complete implementation solutions
+4. Read [FAQ](docs/FAQ.md) to solve common problems
+
+### For Project Launchers
+
+If you're launching an AI Agent project, learn from our experience:
+- *📋 Launch Strategy* - [LAUNCH_STRATEGY.md](LAUNCH_STRATEGY.md) Complete 3-day launch plan
+- *📝 Content Templates* - [LAUNCH_CONTENT.md](LAUNCH_CONTENT.md) Social media copy templates
+- *⚡ 2-Hour Action Guide* - [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md) Quick start checklist
 
 ---
 

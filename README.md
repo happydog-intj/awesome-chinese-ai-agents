@@ -17,6 +17,7 @@
 
 ## 📖 目录
 
+- [🚀 快速开始](#-快速开始)
 - [🌟 精选项目](#-精选项目)
 - [🛠️ 开发工具](#️-开发工具)
 - [🎯 Agent 技能](#-agent-技能)
@@ -31,6 +32,36 @@
 - [📊 实战案例](#-实战案例)
 - [🌐 社区资源](#-社区资源)
 - [🤝 贡献指南](#-贡献指南)
+
+---
+
+## 🚀 快速开始
+
+### 给贡献者
+
+欢迎参与建设这个资源库!你可以:
+
+1. *⭐ Star 本项目* - 支持我们持续更新
+2. *📝 提交资源* - 分享你发现的优质工具和教程
+3. *💬 参与讨论* - 在 [Discussions](https://github.com/happydog-intj/awesome-chinese-ai-agents/discussions) 分享经验
+4. *🐛 报告问题* - 发现错误或过时信息请提 [Issue](https://github.com/happydog-intj/awesome-chinese-ai-agents/issues)
+
+详细贡献指南: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### 给使用者
+
+*新手入门建议*:
+1. 浏览 [精选项目](#-精选项目) 选择一个框架(推荐 LangChain 或 OpenClaw)
+2. 查看 [对话平台集成](#-对话平台集成) 了解如何接入微信/抖音等平台
+3. 参考 [实战案例](#-实战案例) 学习完整的实现方案
+4. 阅读 [FAQ](docs/FAQ.md) 解决常见问题
+
+### 给项目发起者
+
+如果你正在发起一个 AI Agent 项目,参考我们的经验:
+- *📋 发布策略* - [LAUNCH_STRATEGY.md](LAUNCH_STRATEGY.md) 完整的3天发布计划
+- *📝 文案模板* - [LAUNCH_CONTENT.md](LAUNCH_CONTENT.md) 各平台宣传文案
+- *⚡ 2小时行动指南* - [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md) 快速启动清单
 
 ---
 
