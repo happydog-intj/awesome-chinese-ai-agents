@@ -76,16 +76,51 @@ China has a unique digital ecosystem with platforms like WeChat, Douyin (TikTok)
 
 ### AI Agent Frameworks
 
-- **[OpenClaw](https://github.com/openclaw/openclaw)** - Most popular open-source AI agent framework (293K+ ⭐)
-- **[NanoClaw](https://github.com/qwibitai/nanoclaw)** - Lightweight AI agent with native Chinese platform support (21K+ ⭐)
-- **[MetaGPT](https://github.com/geekan/MetaGPT)** - Multi-agent framework from Chinese team
-- **[Qwen-Agent](https://github.com/QwenLM/Qwen-Agent)** - Alibaba's Qwen AI agent framework
+- **[LangChain](https://github.com/langchain-ai/langchain)** - Most popular LLM application framework
+  - Official Chinese documentation
+  - Large Chinese community
+  - [Chinese Getting Started Guide](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide) (8.8K+ ⭐)
 
-### Chinese Native AI Models
+- **[MetaGPT](https://github.com/FoundationAgents/MetaGPT)** - Multi-agent framework from Chinese team
+  - Full Chinese support
+  - Software company-level collaboration
+  - Auto-generate PRD, design docs, and code
+
+- **[AutoGen](https://github.com/microsoft/autogen)** - Microsoft's open-source multi-agent framework
+  - Complete Chinese documentation
+  - Multi-agent collaboration
+  - Rich examples
+
+- **[Wanwu](https://github.com/UnicomAI/wanwu)** - China Unicom's AI Agent Platform (3.9K+ ⭐)
+  - Enterprise-grade multi-tenant platform
+  - Supports agents, workflows, and RAG applications
+  - Model management features
+
+- **[Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** - Knowledge base Q&A based on LangChain
+  - Full Chinese support
+  - Local knowledge base
+  - Supports multiple Chinese LLMs
+
+### Chinese Native LLMs
+
+- **[LLamaFactory](https://github.com/hiyouga/LLamaFactory)** - Easy-to-use LLM fine-tuning framework
+  - Supports multiple Chinese models
+  - One-click training and deployment
+  - Web UI interface
 
 - **[ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)** - Tsinghua's open-source Chinese dialog model
-- **[Qwen](https://github.com/QwenLM/Qwen)** - Alibaba's Tongyi Qianwen series
-- **[Baichuan](https://github.com/baichuan-inc/Baichuan-7B)** - Baichuan Intelligence's LLM
+  - Optimized for Chinese
+  - Local deployment supported
+  - Suitable for private scenarios
+
+- **[Qwen-Agent](https://github.com/QwenLM/Qwen-Agent)** - Alibaba's Qwen AI agent framework
+  - Complete Chinese documentation
+  - Official technical support
+  - Deep integration with Tongyi Qianwen
+
+- **[Chinese-LangChain](https://github.com/yanqiangmiffy/Chinese-LangChain)** - Chinese LangChain project collection (2.8K+ ⭐)
+  - Chinese LLM application cases
+  - Practical project code
 
 ---
 
@@ -148,11 +183,37 @@ China has a unique digital ecosystem with platforms like WeChat, Douyin (TikTok)
 
 ## 💬 Platform Integrations
 
-### Instant Messaging
+### WeChat Ecosystem
 
-| Platform | Integration Difficulty | Documentation | Recommended Tool |
-|----------|----------------------|---------------|------------------|
-| **WeChat** | ⭐⭐⭐⭐ | ⭐⭐⭐ | [WeChaty](https://github.com/wechaty/wechaty) |
+- **[WeChaty](https://github.com/wechaty/wechaty)** - Conversational AI SDK
+  - Supports multiple WeChat protocols
+  - TypeScript/JavaScript
+  - Active community support
+
+- **[chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)** - ChatGPT-based WeChat bot
+  - Ready to use out of the box
+  - Supports multiple LLMs
+  - Plugin system
+
+- **[wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt)** - WeChat + ChatGPT integration
+  - Easy to use
+  - Docker deployment
+  - Group chat support
+
+- **[wechat-bot](https://github.com/wangrongding/wechat-bot)** - Feature-rich WeChat bot
+  - Multiple functions
+  - Scheduled tasks
+  - Group management
+
+- **[wechatbot-webhook](https://github.com/danni-cool/wechatbot-webhook)** - WeChat bot webhook solution
+  - RESTful API
+  - Easy to integrate
+  - Supports Enterprise WeChat
+
+### Other Platforms
+
+| Platform | Integration Difficulty | Documentation | Recommended Solution |
+|----------|----------------------|---------------|---------------------|
 | **Enterprise WeChat** | ⭐⭐⭐ | ⭐⭐⭐⭐ | [Official SDK](https://developer.work.weixin.qq.com/) |
 | **DingTalk** | ⭐⭐ | ⭐⭐⭐⭐⭐ | [Official Platform](https://open.dingtalk.com/) |
 | **Feishu/Lark** | ⭐⭐ | ⭐⭐⭐⭐⭐ | [Official Platform](https://open.feishu.cn/) |

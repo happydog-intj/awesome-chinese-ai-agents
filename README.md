@@ -69,31 +69,39 @@
 
 ### AI Agent 框架
 
-- **[OpenClaw](https://github.com/openclaw/openclaw)** - 最流行的开源 AI Agent 框架 (293K+ ⭐)
-  - 完整的中文文档
-  - 支持微信、钉钉、飞书集成
+- **[LangChain](https://github.com/langchain-ai/langchain)** - 最流行的 LLM 应用开发框架
+  - 官方中文文档
+  - 庞大的中文社区
+  - 海量的中文教程
+  - [中文入门指南](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide) (8.8K+ ⭐)
 
-- **[NanoClaw](https://github.com/qwibitai/nanoclaw)** - 轻量级 AI Agent 框架 (21K+ ⭐)
-  - 原生支持 WhatsApp、Telegram
-  - 内置调度任务和记忆系统
-  - TypeScript 编写,易于二次开发
+- **[MetaGPT](https://github.com/FoundationAgents/MetaGPT)** - 多 Agent 元编程框架 (中国团队)
+  - 完全中文支持
+  - 软件公司级别的协作
+  - 自动生成PRD、设计文档、代码
 
 - **[AutoGen](https://github.com/microsoft/autogen)** - 微软开源的多 Agent 对话框架
   - 中文文档完善
   - 支持多 Agent 协作
   - 丰富的示例代码
 
-- **[LangChain](https://github.com/langchain-ai/langchain)** - 最流行的 LLM 应用开发框架
-  - 官方中文文档
-  - 庞大的中文社区
-  - 海量的中文教程
+- **[万物 Wanwu](https://github.com/UnicomAI/wanwu)** - 中国联通元景万物 Agent 平台 (3.9K+ ⭐)
+  - 企业级多租户 AI Agent 开发平台
+  - 支持智能体、工作流、RAG 应用构建
+  - 模型管理功能
+  - 开发者友好的许可证
 
-- **[MetaGPT](https://github.com/geekan/MetaGPT)** - 多 Agent 元编程框架 (中国团队)
-  - 完全中文支持
-  - 软件公司级别的协作
-  - 自动生成PRD、设计文档、代码
+- **[Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** - 基于 LangChain 的知识库问答应用
+  - 完整的中文支持
+  - 本地知识库问答
+  - 支持多种中文 LLM
 
-### 中文原生 AI Agent
+### 中文原生 LLM 与工具
+
+- **[LLamaFactory](https://github.com/hiyouga/LLamaFactory)** - 易用的 LLM 微调框架
+  - 支持多种中文模型
+  - 一键训练和部署
+  - Web UI 界面
 
 - **[ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)** - 清华开源的中文对话模型
   - 针对中文优化
@@ -105,21 +113,13 @@
   - 官方技术支持
   - 与通义千问深度集成
 
+- **[Chinese-LangChain](https://github.com/yanqiangmiffy/Chinese-LangChain)** - 中文 LangChain 项目集合 (2.8K+ ⭐)
+  - 中文 LLM 应用案例
+  - 实战项目代码
+
 ---
 
 ## 🛠️ 开发工具
-
-### CLI 工具
-
-- **[agent-browser](https://github.com/vercel-labs/agent-browser)** - AI Agent 浏览器自动化工具 (20K+ ⭐)
-  - 支持中文网页交互
-  - Rust 编写,性能强劲
-  - 易于集成到 Agent 中
-
-- **[skills](https://github.com/vercel-labs/skills)** - Agent 技能管理工具
-  - `npx skills` 一键安装
-  - 支持技能市场
-  - 中文技能不断增加
 
 ### 开发框架
 
@@ -129,9 +129,9 @@
   - 与 LangChain 无缝集成
 
 - **[CrewAI](https://github.com/joaomdmoura/crewAI)** - 角色扮演型多 Agent 协作框架
-  - 简单易用的中文配置
+  - 简单易用的 API
   - 适合团队协作场景
-  - 丰富的预设角色
+  - 支持中文场景
 
 ### 测试与调试
 
@@ -317,11 +317,37 @@
 
 ## 💬 对话平台集成
 
+### 微信生态
+
+- **[WeChaty](https://github.com/wechaty/wechaty)** - 对话机器人 SDK
+  - 支持多种微信协议
+  - TypeScript/JavaScript
+  - 活跃的社区支持
+
+- **[chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)** - 基于 ChatGPT 的微信机器人
+  - 开箱即用
+  - 支持多种 LLM
+  - 插件系统
+
+- **[wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt)** - 微信 + ChatGPT 集成
+  - 简单易用
+  - Docker 部署
+  - 支持群聊
+
+- **[wechat-bot](https://github.com/wangrongding/wechat-bot)** - 功能丰富的微信机器人
+  - 支持多种功能
+  - 定时任务
+  - 群管理
+
+- **[wechatbot-webhook](https://github.com/danni-cool/wechatbot-webhook)** - 微信机器人 Webhook 方案
+  - RESTful API
+  - 易于集成
+  - 支持企业微信
+
 ### 即时通讯
 
-| 平台 | 集成难度 | 文档质量 | 推荐工具 |
+| 平台 | 集成难度 | 文档质量 | 推荐方案 |
 |------|---------|---------|---------|
-| **微信** | ⭐⭐⭐⭐ | ⭐⭐⭐ | [WeChaty](https://github.com/wechaty/wechaty) |
 | **企业微信** | ⭐⭐⭐ | ⭐⭐⭐⭐ | [企业微信SDK](https://developer.work.weixin.qq.com/) |
 | **钉钉** | ⭐⭐ | ⭐⭐⭐⭐⭐ | [钉钉开放平台](https://open.dingtalk.com/) |
 | **飞书** | ⭐⭐ | ⭐⭐⭐⭐⭐ | [飞书开放平台](https://open.feishu.cn/) |
@@ -339,33 +365,36 @@
 
 ## 📚 中文文档与教程
 
-### 官方文档翻译
+### 优质学习资源
 
-- **[LangChain 中文文档](https://python.langchain.com.cn/)** - 完整的中文翻译
-- **[OpenAI 中文文档](https://openai.xiniushu.com/)** - 社区维护
-- **[Anthropic Claude 中文指南](https://claude.ai/docs/zh)** - 官方中文版
-- **[Hugging Face 中文课程](https://huggingface.co/learn/nlp-course/zh-CN)** - 免费在线课程
+- **[LangChain-Chinese-Getting-Started-Guide](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide)** (8.8K+ ⭐)
+  - LangChain 中文入门教程
+  - 从零开始的完整指南
+  - 实战案例丰富
+
+- **[Chinese-LangChain](https://github.com/yanqiangmiffy/Chinese-LangChain)** (2.8K+ ⭐)
+  - 中文 LangChain 项目集合
+  - 包含多个实战项目
+  - 代码可直接运行
+
+- **[Hugging Face 中文课程](https://huggingface.co/learn/nlp-course/zh-CN)** - 免费 NLP 在线课程
+  - 官方中文翻译
+  - 交互式学习
+  - 涵盖 Transformers 库
 
 ### 视频教程
 
 - **B站搜索关键词**: "AI Agent 教程", "LangChain 实战", "大模型应用开发"
 - **推荐UP主**:
-  - [@吴恩达深度学习](https://space.bilibili.com/1567748478)
-  - [@李沐](https://space.bilibili.com/1567748478)
-  - [@跟李沐学AI](https://space.bilibili.com/1567748478)
+  - [@李沐](https://space.bilibili.com/1567748478) - 深度学习论文精读
+  - 搜索 "LangChain 中文教程"
+  - 搜索 "ChatGPT API 开发"
 
-### 博客文章
+### 博客与社区
 
 - **[知乎 - AI Agent 话题](https://www.zhihu.com/topic/20436836)** - 高质量讨论
 - **[掘金 - AI Agent 标签](https://juejin.cn/tag/AI%20Agent)** - 技术文章
-- **[CSDN - AI Agent 专栏](https://blog.csdn.com/nav/ai)** - 实战教程
-
-### 书籍推荐
-
-- 《大模型应用开发实战》
-- 《LangChain 实战指南》
-- 《AI Agent 设计模式》
-- 《ChatGPT 提示工程》
+- **[CSDN - AI 专区](https://blog.csdn.com/nav/ai)** - 实战教程
 
 ---
 
@@ -507,10 +536,10 @@
 **场景**: 品牌方需要批量生成小红书内容并监控数据
 
 **技术栈**:
-- OpenClaw (Agent框架)
-- Claude Sonnet (内容生成)
-- 小红书API (内容发布)
-- Google Sheets (数据管理)
+- LangChain (Agent框架)
+- ChatGPT/Claude (内容生成)
+- 小红书开放平台 (内容发布)
+- MongoDB (数据存储)
 
 **功能**:
 - 根据关键词生成笔记
