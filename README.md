@@ -22,6 +22,17 @@
 - 💡 *实战导向* - 包含完整的实战案例和最佳实践
 - 🤝 *社区驱动* - 欢迎所有开发者贡献和完善
 
+## 📊 资源统计
+
+- 🔧 *AI Agent 框架*: 15+
+- 🤖 *中文 LLM*: 10+
+- 🛠️ *开发工具*: 25+
+- 💬 *平台集成*: 8+ (微信、抖音、小红书等)
+- 📚 *学习资源*: 20+
+- 🎨 *提示词模板*: 15+
+- 📊 *实战案例*: 5+
+- 🔌 *中国服务 API*: 30+
+
 ---
 
 ## 📖 目录
@@ -224,6 +235,46 @@ ollama run qwen  # 运行通义千问模型
   - 最佳实践案例
   - 持续更新
 
+### 监控与调试
+
+- **[Langfuse](https://github.com/langfuse/langfuse)** - 开源 LLM 工程平台
+  - LLM 可观测性
+  - Prompt 管理和版本控制
+  - 成本追踪和分析
+  - 支持多种 LLM 框架集成
+
+- **[LangSmith](https://smith.langchain.com/)** - LangChain 官方监控平台
+  - 实时追踪 Agent 执行
+  - 调试和优化 Prompt
+  - 性能分析
+  - 中文界面支持
+
+- **[OpenLLMetry](https://github.com/traceloop/openllmetry)** - LLM 可观测性工具
+  - OpenTelemetry 集成
+  - 追踪 LLM 调用
+  - 性能监控
+  - 开源免费
+
+### 向量数据库
+
+- **[Qdrant](https://github.com/qdrant/qdrant)** - 高性能向量搜索引擎
+  - Rust 编写,性能优秀
+  - 支持过滤和分组
+  - 完善的中文文档
+  - Docker 一键部署
+
+- **[Milvus](https://github.com/milvus-io/milvus)** - 云原生向量数据库
+  - 支持海量数据
+  - 多种索引算法
+  - 中国团队开发
+  - 企业级特性
+
+- **[Chroma](https://github.com/chroma-core/chroma)** - AI 原生向量数据库
+  - 轻量级,易于使用
+  - Python/JS SDK
+  - 适合快速原型开发
+  - 开源免费
+
 ### 部署与运维
 
 - **[Ollama](https://github.com/ollama/ollama)** - 本地运行大语言模型
@@ -237,6 +288,12 @@ ollama run qwen  # 运行通义千问模型
   - 支持 CPU 运行
   - Docker 部署
   - 隐私保护
+
+- **[vLLM](https://github.com/vllm-project/vllm)** - 高性能 LLM 推理引擎
+  - 吞吐量提升 10-20倍
+  - 支持主流 LLM
+  - 生产环境可用
+  - PagedAttention 优化
 
 ---
 
@@ -566,6 +623,99 @@ ollama run qwen  # 运行通义千问模型
 6. 常见错误及解决方案
 ```
 
+### Agent 系统提示词
+
+```markdown
+#### 多步骤任务执行 Agent
+
+你是一个任务执行助手,能够将复杂任务分解为多个步骤并逐步完成。
+
+对于用户的请求,请:
+1. 分析任务需求,列出需要完成的子任务
+2. 为每个子任务制定执行计划
+3. 按顺序执行各个子任务
+4. 每完成一个子任务后,总结结果并继续下一步
+5. 如遇到问题,说明原因并调整计划
+6. 所有子任务完成后,提供完整总结
+
+工具使用规则:
+- 需要搜索信息时使用 search 工具
+- 需要计算时使用 calculator 工具
+- 需要生成代码时使用 code_generator 工具
+- 每次只调用一个工具,等待结果后再继续
+
+请用中文清晰地说明你的思考过程和执行步骤。
+```
+
+```markdown
+#### RAG 知识库问答 Agent
+
+你是一个专业的知识库助手,基于提供的上下文回答用户问题。
+
+回答规则:
+1. 仔细阅读检索到的上下文信息
+2. 只基于上下文中的内容回答,不要编造
+3. 如果上下文中没有相关信息,诚实地说"根据现有资料无法回答"
+4. 引用时请注明来源段落
+5. 回答要准确、简洁、专业
+6. 使用中文回答
+
+上下文信息:
+{context}
+
+用户问题:
+{question}
+
+请基于以上上下文回答用户问题。
+```
+
+```markdown
+#### 微信客服机器人
+
+你是 {公司名称} 的智能客服助手,负责解答用户咨询。
+
+服务准则:
+- 态度友好,回复及时
+- 用简单易懂的语言
+- 提供准确的信息
+- 无法解决时及时转人工
+
+常见问题处理:
+1. 订单查询 → 引导提供订单号,调用订单查询接口
+2. 物流查询 → 引导提供运单号,调用物流接口
+3. 退换货 → 说明政策,引导填写申请表单
+4. 产品咨询 → 基于产品知识库回答
+5. 投诉建议 → 记录并转人工处理
+
+触发转人工关键词:
+"人工客服"、"转人工"、"投诉"、"经理"
+
+请用温暖、专业的语气与用户交流,使用中文回复。
+```
+
+### 数据分析提示词
+
+```markdown
+#### 数据分析与可视化
+
+作为数据分析师,请分析以下数据并生成报告:
+
+数据: {数据内容或数据描述}
+
+分析要求:
+1. 数据清洗: 识别并处理异常值、缺失值
+2. 描述性统计: 计算均值、中位数、标准差等
+3. 趋势分析: 识别数据中的规律和趋势
+4. 相关性分析: 分析变量之间的关系
+5. 可视化建议: 推荐合适的图表类型
+6. 结论总结: 提炼关键发现和建议
+
+输出格式:
+- 使用 Markdown 表格展示统计结果
+- 用中文描述发现和洞察
+- 提供 Python/Pandas 代码示例
+```
+
 ---
 
 ## 🔌 中国服务API集成
@@ -661,6 +811,449 @@ ollama run qwen  # 运行通义千问模型
 - 排名监控
 
 **代码**: [查看完整实现](examples/seo-automation/)
+
+---
+
+### 快速上手代码示例
+
+#### 示例1: 最简单的 LangChain Agent
+
+```python
+from langchain.agents import initialize_agent, Tool, AgentType
+from langchain_openai import ChatOpenAI
+from langchain.tools import DuckDuckGoSearchRun
+
+# 初始化 LLM
+llm = ChatOpenAI(
+    model="gpt-3.5-turbo",
+    temperature=0,
+    openai_api_key="your-api-key"
+)
+
+# 定义工具
+search = DuckDuckGoSearchRun()
+tools = [
+    Tool(
+        name="搜索",
+        func=search.run,
+        description="用于搜索最新信息。输入应该是搜索查询。"
+    )
+]
+
+# 创建 Agent
+agent = initialize_agent(
+    tools=tools,
+    llm=llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True,
+    max_iterations=3
+)
+
+# 运行 Agent
+result = agent.run("2024年中国AI发展现状")
+print(result)
+```
+
+#### 示例2: 简单的 RAG 知识库问答
+
+```python
+from langchain_community.document_loaders import TextLoader
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_community.vectorstores import Chroma
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.chains import RetrievalQA
+
+# 1. 加载文档
+loader = TextLoader("knowledge_base.txt", encoding="utf-8")
+documents = loader.load()
+
+# 2. 文档分块
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50
+)
+texts = text_splitter.split_documents(documents)
+
+# 3. 创建向量数据库
+embeddings = OpenAIEmbeddings()
+vectorstore = Chroma.from_documents(
+    documents=texts,
+    embedding=embeddings
+)
+
+# 4. 创建问答链
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
+qa_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    chain_type="stuff",
+    retriever=vectorstore.as_retriever(search_kwargs={"k": 3})
+)
+
+# 5. 提问
+question = "这个产品的主要功能是什么?"
+answer = qa_chain.run(question)
+print(answer)
+```
+
+#### 示例3: 微信机器人集成 (基于 WeChaty)
+
+```javascript
+const { WechatyBuilder } = require('wechaty')
+const { OpenAI } = require('openai')
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+})
+
+// 创建机器人
+const bot = WechatyBuilder.build({
+  name: 'ai-assistant'
+})
+
+// 监听消息
+bot.on('message', async (message) => {
+  // 忽略自己的消息
+  if (message.self()) return
+
+  // 获取消息内容
+  const text = message.text()
+  const contact = message.talker()
+
+  // 只响应包含 @机器人 的消息
+  if (!text.includes('@AI助手')) return
+
+  try {
+    // 调用 OpenAI
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo',
+      messages: [
+        { role: 'system', content: '你是一个友好的助手,用简洁的中文回答问题。' },
+        { role: 'user', content: text.replace('@AI助手', '').trim() }
+      ],
+      max_tokens: 500
+    })
+
+    const reply = response.choices[0].message.content
+    await message.say(reply)
+
+  } catch (error) {
+    console.error('Error:', error)
+    await message.say('抱歉,我遇到了一些问题,请稍后再试。')
+  }
+})
+
+// 启动机器人
+bot.start()
+  .then(() => console.log('机器人启动成功'))
+  .catch(e => console.error('启动失败:', e))
+```
+
+#### 示例4: 使用 Dify API 调用 Agent
+
+```python
+import requests
+
+# Dify API 配置
+DIFY_API_KEY = "your-dify-api-key"
+DIFY_API_URL = "https://api.dify.ai/v1/chat-messages"
+
+def chat_with_dify(query, conversation_id=None):
+    """调用 Dify Agent"""
+
+    headers = {
+        "Authorization": f"Bearer {DIFY_API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    data = {
+        "inputs": {},
+        "query": query,
+        "response_mode": "blocking",
+        "user": "user-123"
+    }
+
+    if conversation_id:
+        data["conversation_id"] = conversation_id
+
+    response = requests.post(DIFY_API_URL, headers=headers, json=data)
+    result = response.json()
+
+    return {
+        "answer": result["answer"],
+        "conversation_id": result["conversation_id"]
+    }
+
+# 使用示例
+response1 = chat_with_dify("你好,介绍一下自己")
+print(response1["answer"])
+
+# 继续对话
+response2 = chat_with_dify(
+    "你能做什么?",
+    conversation_id=response1["conversation_id"]
+)
+print(response2["answer"])
+```
+
+#### 示例5: 成本监控和缓存优化
+
+```python
+from functools import lru_cache
+import hashlib
+import json
+from langchain_openai import ChatOpenAI
+from langchain.cache import InMemoryCache
+import langchain
+
+# 启用 LangChain 缓存
+langchain.llm_cache = InMemoryCache()
+
+class CostTracker:
+    """成本追踪器"""
+    def __init__(self):
+        self.total_tokens = 0
+        self.total_cost = 0
+        # GPT-3.5-turbo 价格 (每1K tokens)
+        self.input_cost_per_1k = 0.0015
+        self.output_cost_per_1k = 0.002
+
+    def track(self, input_tokens, output_tokens):
+        self.total_tokens += (input_tokens + output_tokens)
+        cost = (input_tokens * self.input_cost_per_1k / 1000 +
+                output_tokens * self.output_cost_per_1k / 1000)
+        self.total_cost += cost
+        return cost
+
+    def get_stats(self):
+        return {
+            "total_tokens": self.total_tokens,
+            "total_cost_usd": round(self.total_cost, 4)
+        }
+
+# 初始化
+tracker = CostTracker()
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+
+# 使用缓存的装饰器
+@lru_cache(maxsize=100)
+def get_cached_response(query_hash):
+    """缓存相似查询的响应"""
+    return None
+
+def chat(query):
+    # 计算查询哈希
+    query_hash = hashlib.md5(query.encode()).hexdigest()
+
+    # 检查缓存
+    cached = get_cached_response(query_hash)
+    if cached:
+        print("✓ 使用缓存响应,节省成本")
+        return cached
+
+    # 调用 LLM
+    response = llm.predict(query)
+
+    # 追踪成本 (估算)
+    input_tokens = len(query) // 4
+    output_tokens = len(response) // 4
+    cost = tracker.track(input_tokens, output_tokens)
+
+    print(f"✓ 本次调用成本: ${cost:.4f}")
+
+    # 缓存响应
+    get_cached_response.cache_info()
+
+    return response
+
+# 测试
+print(chat("什么是人工智能?"))
+print(chat("什么是人工智能?"))  # 第二次调用会使用缓存
+
+# 查看统计
+print("\n成本统计:", tracker.get_stats())
+```
+
+---
+
+## 🔧 常见错误与故障排除
+
+### 安装和环境问题
+
+<details>
+<summary><b>错误: ImportError: No module named 'langchain'</b></summary>
+
+*原因*: LangChain 未安装或安装版本不正确
+
+*解决方案*:
+```bash
+# 安装最新版本
+pip install langchain langchain-openai langchain-community
+
+# 或指定版本
+pip install langchain==0.1.0
+
+# 检查安装
+python -c "import langchain; print(langchain.__version__)"
+```
+</details>
+
+<details>
+<summary><b>错误: SSL Certificate Verification Failed</b></summary>
+
+*原因*: SSL 证书验证失败,常见于国内网络环境
+
+*解决方案*:
+```python
+# 临时禁用 SSL 验证 (不推荐生产环境)
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+# 或设置代理
+import os
+os.environ['HTTP_PROXY'] = 'http://your-proxy:port'
+os.environ['HTTPS_PROXY'] = 'http://your-proxy:port'
+```
+</details>
+
+### API 调用问题
+
+<details>
+<summary><b>错误: RateLimitError: Rate limit exceeded</b></summary>
+
+*原因*: API 调用频率超限
+
+*解决方案*:
+```python
+from time import sleep
+from tenacity import retry, wait_exponential, stop_after_attempt
+
+@retry(
+    wait=wait_exponential(multiplier=1, min=4, max=60),
+    stop=stop_after_attempt(5)
+)
+def call_llm_with_retry(prompt):
+    try:
+        return llm.predict(prompt)
+    except Exception as e:
+        print(f"错误: {e}, 重试中...")
+        raise
+
+# 或添加延迟
+sleep(1)  # 每次调用间隔 1 秒
+```
+</details>
+
+<details>
+<summary><b>错误: AuthenticationError: Invalid API key</b></summary>
+
+*原因*: API 密钥无效或未设置
+
+*解决方案*:
+```bash
+# 设置环境变量
+export OPENAI_API_KEY="sk-..."
+
+# 或在代码中设置
+import os
+os.environ['OPENAI_API_KEY'] = 'sk-...'
+
+# 验证密钥
+from openai import OpenAI
+client = OpenAI()
+print(client.models.list())  # 测试连接
+```
+</details>
+
+### 向量数据库问题
+
+<details>
+<summary><b>错误: ChromaDB dimension mismatch</b></summary>
+
+*原因*: Embedding 维度与数据库中存储的不一致
+
+*解决方案*:
+```python
+# 删除旧数据库重新创建
+import shutil
+shutil.rmtree("./chroma_db")
+
+# 确保使用相同的 Embedding 模型
+from langchain_openai import OpenAIEmbeddings
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+
+# 重新创建向量库
+vectorstore = Chroma.from_documents(
+    documents=docs,
+    embedding=embeddings,
+    persist_directory="./chroma_db"
+)
+```
+</details>
+
+### 性能问题
+
+<details>
+<summary><b>问题: 响应速度太慢</b></summary>
+
+*优化方案*:
+
+1. *使用流式输出*
+```python
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+
+llm = ChatOpenAI(
+    streaming=True,
+    callbacks=[StreamingStdOutCallbackHandler()]
+)
+```
+
+2. *减少 Top-K*
+```python
+retriever = vectorstore.as_retriever(
+    search_kwargs={"k": 3}  # 从 10 减少到 3
+)
+```
+
+3. *使用更快的模型*
+```python
+llm = ChatOpenAI(model="gpt-3.5-turbo")  # 而不是 gpt-4
+```
+
+4. *并行处理*
+```python
+from concurrent.futures import ThreadPoolExecutor
+
+with ThreadPoolExecutor(max_workers=5) as executor:
+    results = executor.map(process_query, queries)
+```
+</details>
+
+### 中文处理问题
+
+<details>
+<summary><b>问题: 中文分词效果差</b></summary>
+
+*解决方案*:
+```python
+# 使用专门的中文分词器
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50,
+    separators=["\n\n", "\n", "。", "!", "?", ";", ",", " ", ""],
+    keep_separator=True
+)
+
+# 或使用 jieba
+import jieba
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50,
+    length_function=lambda x: len(jieba.lcut(x))
+)
+```
+</details>
 
 ---
 
@@ -820,6 +1413,78 @@ A: 成本优化技巧:
    - Rerank 重排序
    - 动态调整 Top-K
    - 结果去重和过滤
+
+### 成本优化策略
+
+#### API 调用成本对比 (每百万 tokens)
+
+| 模型 | 输入成本 | 输出成本 | 性价比 | 推荐场景 |
+|------|---------|---------|--------|---------|
+| *GPT-4 Turbo* | $10 | $30 | ⭐⭐⭐ | 复杂推理 |
+| *GPT-3.5 Turbo* | $0.5 | $1.5 | ⭐⭐⭐⭐⭐ | 日常对话 |
+| *通义千问 Plus* | ¥8 | ¥20 | ⭐⭐⭐⭐ | 中文场景 |
+| *通义千问* | ¥2 | ¥6 | ⭐⭐⭐⭐⭐ | 高频调用 |
+| *文心一言* | ¥12 | ¥12 | ⭐⭐⭐⭐ | 企业应用 |
+| *Claude 3.5 Sonnet* | $3 | $15 | ⭐⭐⭐⭐ | 代码生成 |
+
+#### 降低成本的 10 个技巧
+
+1. *智能路由*: 简单任务用便宜模型,复杂任务用贵模型
+2. *Prompt 压缩*: 移除冗余信息,使用缩写和简洁表达
+3. *缓存策略*: 相同/相似问题直接返回缓存 (可节省 60-80%)
+4. *流式输出*: 使用 streaming 避免重复生成
+5. *批处理*: 合并多个请求,减少 API 调用次数
+6. *本地模型*: 高频简单任务用 Ollama 本地模型
+7. *Token 限制*: 设置 max_tokens 避免超长输出
+8. *异步处理*: 非实时场景使用异步,降低并发成本
+9. *模型微调*: 专有场景微调小模型替代大模型
+10. *监控告警*: 使用 Langfuse 实时监控成本,设置预算告警
+
+### 安全与隐私保护
+
+#### 数据安全checklist
+
+- [ ] *API 密钥管理*
+  - 使用环境变量,不要硬编码
+  - 定期轮换密钥
+  - 不同环境使用不同密钥
+  - 启用 IP 白名单
+
+- [ ] *敏感信息过滤*
+  - 过滤身份证号、手机号
+  - 脱敏处理用户数据
+  - 避免将敏感数据发送到 LLM
+  - 加密存储历史对话
+
+- [ ] *访问控制*
+  - 实施用户认证和授权
+  - 限制 API 调用频率
+  - 记录操作审计日志
+  - 实施最小权限原则
+
+- [ ] *本地化部署*
+  - 敏感场景使用本地模型 (Ollama + ChatGLM)
+  - 私有向量数据库 (Qdrant/Milvus 私有部署)
+  - 内网隔离,不连接公网
+  - 定期安全审计
+
+#### 常见安全风险
+
+1. *Prompt 注入攻击*
+   - 风险: 用户输入包含恶意 Prompt 覆盖原始指令
+   - 防范: 输入验证,使用系统角色分离,添加安全边界
+
+2. *数据泄露*
+   - 风险: 将用户敏感数据发送到第三方 LLM
+   - 防范: 数据脱敏,本地模型,加密传输
+
+3. *DDoS 和滥用*
+   - 风险: 恶意用户大量调用 API 消耗资源
+   - 防范: 限流限频,CAPTCHA,成本预算告警
+
+4. *模型输出有害内容*
+   - 风险: LLM 生成违规、有害或错误信息
+   - 防范: 内容审核,输出过滤,人工审核机制
 
 ---
 
