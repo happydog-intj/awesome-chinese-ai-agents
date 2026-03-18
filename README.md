@@ -199,6 +199,11 @@ ollama run qwen  # 运行通义千问模型
   - 简单易用的 API
   - 适合团队协作场景
   - 支持中文场景
+ 
+- **[DD-OS](https://github.com/FatBy/DD-OS)** - 基于事件驱动与 Nexus 记忆机制的 AI Agent 操作系统
+  - 可视化的节点，开箱即用
+  - V3 状态机架构配合 Nexus 分层记忆，执行更稳定
+  - 独创“模拟城市”等轴测 UI，全景监控 Agent 任务流
 
 ### RAG 与知识库
 
