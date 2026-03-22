@@ -342,6 +342,8 @@ ollama run qwen  # 运行通义千问模型
   - 数据清洗与结构化
   - 定时监控与告警
 
+- 🎬 **[Tubeify](https://clawhub.ai/esokullu/tubeify)** - AI 视频剪辑技能，自动删除停顿和口头禅，专为 YouTube 创作者设计，API 驱动，按次付费
+
 ### 中文特色技能
 
 #### 社交媒体自动化
@@ -409,6 +411,8 @@ ollama run qwen  # 运行通义千问模型
   - 群发消息
   - 数据统计
   - CRM集成
+
+- 🌐 **[LobsterDomains](https://clawhub.ai/esokullu/lobsterdomains)** - 加密货币域名注册技能，支持 USDC/USDT/ETH/BTC 链上支付，1000+ 顶级域名，专为 AI Agent 自主注册设计
 
 ### 营销与运营
 
