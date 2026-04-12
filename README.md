@@ -32,6 +32,7 @@
 
 ## 📊 资源统计
 
+- 🔥 *Agent Harness*: 6+ (Claude Code、Codex、Gemini CLI 等) **🆕**
 - 🔧 *AI Agent 框架*: 15+
 - 🤖 *中文 LLM*: 10+
 - 🛠️ *开发工具*: 25+
@@ -45,6 +46,7 @@
 
 ## 📖 目录
 
+- [🔥 Agent Harness —— 让 AI 直接写代码](#-agent-harness--让-ai-直接写代码) ⬅️ **新增置顶**
 - [🚀 快速开始](#-快速开始)
 - [🌟 精选项目](#-精选项目)
 - [🛠️ 开发工具](#️-开发工具)
@@ -62,6 +64,147 @@
 - [❓ 常见问题速查](#-常见问题速查)
 - [💡 最佳实践](#-最佳实践)
 - [🤝 贡献指南](#-贡献指南)
+
+---
+
+## 🔥 Agent Harness —— 让 AI 直接写代码
+
+> **什么是 Agent Harness？**
+> Harness（执行框架）是让 AI Agent **直接操控编码工具**的调度层 —— 不只是生成代码建议，而是真正打开编辑器、读写文件、跑测试、提 PR，全流程自动完成。
+
+### 🎯 核心概念
+
+| 概念 | 说明 |
+|------|------|
+| **Harness** | Agent 的"身体"——与代码工具（Claude Code、Codex、Gemini CLI 等）交互的执行层 |
+| **ACP 协议** | Agent Control Protocol，OpenClaw 用于调度 Harness 的标准接口 |
+| **Coding Agent** | 在 Harness 中运行的代码智能体，可自主规划、编写、调试代码 |
+| **Session** | 每次 Harness 调用的独立上下文，支持一次性（run）和持久（session）两种模式 |
+
+### 🚀 主流 Agent Harness 对比
+
+| Harness | 背后模型 | 适用场景 | 中文支持 | 开源 |
+|---------|---------|---------|---------|------|
+| **[Claude Code](https://github.com/anthropics/claude-code)** | Claude 3.5/3.7 | 全流程代码任务、复杂重构 | ✅ 中文指令友好 | 部分开源 |
+| **[Codex CLI](https://github.com/openai/codex)** | GPT-4o / o3 | 终端命令、脚本生成 | ✅ | ✅ 开源 |
+| **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | Gemini 2.5 Pro | 大上下文代码理解 | ✅ | ✅ 开源 |
+| **[Aider](https://github.com/paul-gauthier/aider)** | 多模型 | 对话式代码修改、Git 集成 | ✅ | ✅ 开源 |
+| **[Cursor](https://cursor.sh/)** | 多模型 | IDE 级别 AI 辅助 | ✅ | ❌ 商业 |
+| **[OpenCode](https://github.com/opencode-ai/opencode)** | 多模型 | 终端原生、轻量 | ✅ | ✅ 开源 |
+
+### ⚡ OpenClaw ACP Harness
+
+[OpenClaw](https://github.com/openclaw/openclaw) 通过 **ACP（Agent Control Protocol）** 原生支持 Harness 调度，可在对话中直接唤起 Claude Code、Codex 等 Coding Agent：
+
+```
+# 在 OpenClaw 中直接对话触发 Harness
+"帮我用 Codex 重构这个函数"
+"让 Claude Code 审查一下 PR #42"
+"在 Gemini CLI 里分析整个代码库"
+```
+
+**核心特性：**
+- 🔄 **多 Harness 并行调度** — 同时启动多个 Coding Agent 处理不同子任务
+- 📌 **Thread 绑定** — Discord/Slack 频道中每个对话线程独立维护一个 Agent Session
+- 🔁 **Push 完成通知** — 任务完成后主动推送结果，无需轮询
+- 🔒 **权限隔离** — `bypassPermissions` 模式下 Agent 可全自动操作，无需人工确认
+- 🌐 **中文指令透传** — 直接用中文描述任务，OpenClaw 自动适配各 Harness 协议
+
+**快速配置示例：**
+
+```jsonc
+// openclaw.config.json
+{
+  "acp": {
+    "defaultAgent": "claude-code",  // 默认 Harness
+    "allowedAgents": ["claude-code", "codex", "gemini-cli", "aider"],
+    "sessionTarget": "isolated"     // 隔离执行，不污染主会话
+  }
+}
+```
+
+**对话触发示例（Discord/Telegram/微信）：**
+
+```
+用户: 帮我在 Codex 里实现一个微信消息去重模块
+AI:  好的，正在启动 Codex... [spawn isolated session]
+     任务完成后会通知你 🚀
+
+# 几分钟后
+AI:  ✅ Codex 完成了！已在 feat/dedup-wechat 分支提交代码：
+     - 新增 MessageDeduplicator 类
+     - 单元测试覆盖率 92%
+     - PR 链接：https://github.com/...
+```
+
+### 🛠️ 主流 Harness 安装与配置
+
+#### Claude Code（推荐）
+
+```bash
+# 安装
+npm install -g @anthropic-ai/claude-code
+
+# 配置国内可访问的 API 端点（支持 BRConnector 等中转）
+export ANTHROPIC_BASE_URL="https://your-proxy.example.com"
+export ANTHROPIC_API_KEY="sk-..."
+
+# 验证
+claude --version
+
+# 以非交互模式运行（适合 Harness 调度）
+claude --print --permission-mode bypassPermissions "重构 utils.py 中的缓存逻辑"
+```
+
+#### Codex CLI
+
+```bash
+# 安装
+npm install -g @openai/codex
+
+# 配置
+export OPENAI_API_KEY="sk-..."
+# 国内用户可配置 baseURL
+export OPENAI_BASE_URL="https://your-proxy.example.com/v1"
+
+# 运行（需要 PTY 终端）
+codex "用 Python 写一个飞书消息推送脚本"
+```
+
+#### Aider（多模型，中文友好）
+
+```bash
+# 安装
+pip install aider-chat
+
+# 配置通义千问（国内直连）
+export OPENAI_API_KEY="your-qwen-api-key"
+export OPENAI_API_BASE="https://dashscope.aliyuncs.com/compatible-mode/v1"
+
+# 启动，绑定到 Git 仓库
+cd your-project
+aider --model qwen-max --chinese  # 全程中文交互
+```
+
+### 📋 Harness 使用场景速查
+
+| 场景 | 推荐 Harness | 说明 |
+|------|-------------|------|
+| **新功能开发** | Claude Code | 理解需求 → 规划 → 实现 → 测试，全自动 |
+| **PR 代码审查** | Claude Code / Gemini CLI | 分析 diff，给出中文审查意见 |
+| **大型重构** | Gemini CLI | 200K 上下文，适合大代码库 |
+| **脚本生成** | Codex | 快速生成 shell/Python 工具脚本 |
+| **对话式修改** | Aider | 持续对话，每步提交 Git |
+| **IDE 辅助** | Cursor | 图形化，适合不习惯终端的开发者 |
+| **企业私有化** | Aider + 本地 LLM | Ollama + Qwen，数据不出内网 |
+
+### 🔗 相关资源
+
+- **[OpenClaw 官方文档 - Coding Agent](https://docs.openclaw.ai)** - ACP Harness 配置完整指南
+- **[Claude Code GitHub](https://github.com/anthropics/claude-code)** - 官方仓库
+- **[Codex CLI GitHub](https://github.com/openai/codex)** - OpenAI 开源 Harness
+- **[Aider GitHub](https://github.com/paul-gauthier/aider)** - 多模型对话式 Harness（18K+ ⭐）
+- **[Gemini CLI GitHub](https://github.com/google-gemini/gemini-cli)** - Google 官方 CLI Harness
 
 ---
 
@@ -1537,7 +1680,8 @@ A: 成本优化技巧:
 
 ## 📊 项目统计
 
-- 📚 收录资源: **150+**
+- 📚 收录资源: **160+**
+- 🔥 Agent Harness: **6+** 🆕
 - 🛠️ 开发工具: **30+**
 - 🎯 Agent技能: **80+**
 - 💬 平台集成: **15+**
