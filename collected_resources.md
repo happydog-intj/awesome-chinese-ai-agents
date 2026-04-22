@@ -396,3 +396,55 @@
 7. **codecrafters-io/build-your-own-x** - 来源: GitHub Trending
    - https://github.com/codecrafters-io/build-your-own-x
    - A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress
+
+## 2026年新增资源 - 2026-04-22
+
+### 国际主流框架（高星推荐）
+
+1. **bytedance/deer-flow** (63,289 stars) - 字节跳动开源
+   - https://github.com/bytedance/deer-flow
+   - 长程 SuperAgent 框架，支持研究、编码、内容创作
+   - 集成沙箱、长期记忆、工具调用、子Agent、消息网关
+   - 可执行数分钟至数小时的复杂任务
+
+2. **lobehub/lobehub** (75,453 stars)
+   - https://github.com/lobehub/lobehub
+   - 下一代多 Agent 协作平台
+   - 以 Agent 为工作单元，支持多Agent团队设计
+   - 集成 AI 应用市场，支持中文界面
+
+3. **google-gemini/gemini-cli** (102,048 stars)
+   - https://github.com/google-gemini/gemini-cli
+   - Google 官方 Gemini 终端 AI Agent
+   - 将 Gemini 能力直接带入终端
+   - 开源，适合中文开发者使用
+
+4. **infiniflow/ragflow** (78,694 stars) - 中国团队主导
+   - https://github.com/infiniflow/ragflow
+   - 领先的开源 RAG + Agent 引擎
+   - 深度文档理解，优质 context 层
+   - 已更新至 78K+ stars（持续高速增长）
+
+5. **NousResearch/hermes-agent** (108,532 stars)
+   - https://github.com/NousResearch/hermes-agent
+   - "The agent that grows with you"
+   - 2026年新出现的高star Agent项目
+
+### 中文生态新项目
+
+6. **Xianyu33666/Dream-Creator** (126 stars) - 2026-04-21
+   - https://github.com/Xianyu33666/Dream-Creator
+   - AI驱动的虚拟开发团队，12个专业agent协作
+   - 从需求收集到部署，覆盖完整开发流程
+   - 支持中英文，适配中国开发者
+
+7. **Xingsandesu/CarrotAI** (82 stars) - 2026-03-31
+   - https://github.com/Xingsandesu/CarrotAI
+   - 支持SSE实时流式聊天的AI Agent应用
+   - 内置MCP协议集成，支持并发多SSE MCP服务器
+   - 界面支持中文/英文/日文三语言
+
+8. **1Panel-dev/MaxKB** (20,407 stars)
+   - https://github.com/1Panel-dev/MaxKB
+   - 开源企业级智能体平台
+   - 强大易用，适合企业知识库场景

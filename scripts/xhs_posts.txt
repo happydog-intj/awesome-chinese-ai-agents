@@ -1,0 +1,114 @@
+中文AI开发者必收藏！这个资源库帮你少走一年弯路 🦞
+做 AI Agent 开发，英文资料看不完，中文资料又找不到？
+
+这个开源资源库专门为中文开发者整理，收录了 100+ 真实可用的项目：
+
+✅ LangChain / AutoGen / Dify 框架对比 + 中文文档
+✅ 微信/企业微信/飞书/钉钉接入方案
+✅ DeepSeek / 通义 / 文心 代码示例
+✅ 完整实战案例（客服 Bot / 代码审计 / 舆情监控）
+
+每天自动更新，不会过时～
+
+GitHub: github.com/happydog-intj/awesome-chinese-ai-agents
+
+#AI开发 #AIAgent #程序员 #开源项目 #DeepSeek #LLM #人工智能
+---
+2026年最值得关注的国产AI框架，我帮你整理好了 ✨
+选 AI Agent 框架太难了！LangChain、AutoGen、Dify、CrewAI……每个都说自己好。
+
+作为踩过坑的开发者，分享一下我的选型思路：
+
+🔧 想接国产模型 → 百炼 / AgentScope（天然适配）
+🎨 想要可视化配置 → Dify（非技术同学也能用）
+🤝 想做多智能体 → AutoGen（协作场景最强）
+⚡ 想快速上手 → CrewAI（一周出 demo）
+💪 想深度定制 → LangChain（生态最成熟）
+
+详细对比和资源都在这个开源库里：
+github.com/happydog-intj/awesome-chinese-ai-agents
+
+#框架选型 #AI开发 #程序员必看 #AIAgent #DeepSeek #开源
+---
+把AI接入微信/飞书，这些坑我都替你踩过了 😤
+做了好几个企业AI项目，总结了中国平台接入最容易踩的坑：
+
+微信公众号
+→ 消息需要5秒内回复，LLM推理来不及
+→ 解决方案：异步处理 + 客服消息接口
+
+企业微信
+→ 企业应用审核严格，个人号方案更灵活
+→ 推荐用 WeChatFerry 做个人号接入
+
+飞书
+→ 接口最规范，开发体验最好
+→ 官方 SDK 直接用，别自己造轮子
+
+钉钉
+→ Stream 模式响应快，推荐替代轮询
+
+这些方案的具体代码和项目都收录在这里：
+github.com/happydog-intj/awesome-chinese-ai-agents
+
+#程序员 #AI开发 #微信开发 #飞书 #AIAgent #企业AI #踩坑记录
+---
+DeepSeek 降价后，哪些AI场景突然变得可行了？ 💡
+成本降下来之后，这些之前"做不起"的方案开始有人跑了：
+
+📊 每日个性化报告 Agent
+给每个用户单独跑一遍分析，以前太贵，现在成本降了 10 倍
+
+🔍 实时文档审查
+代码提交触发 AI 审查，全量覆盖不再是奢侈
+
+💬 长上下文多轮对话
+不用再削减上下文窗口省 token 了
+
+🤖 多 Agent 协作流程
+可以让几个 Agent 互相讨论、交叉验证
+
+想了解这些场景的具体实现？我整理了一个持续更新的中文 AI Agent 资源库：
+github.com/happydog-intj/awesome-chinese-ai-agents
+
+#DeepSeek #AI开发 #AIAgent #创业 #程序员 #技术分享
+---
+开源了！中文AI Agent 资源库，每天自动更新 ⭐
+半年前因为找不到好用的中文 AI Agent 资源，决定自己整理一个。
+
+现在这个库已经收录了：
+
+📦 100+ 精选开源项目
+🏷️ 按场景分类（对话/代码/搜索/自动化…）
+🔗 微信/飞书/钉钉等国内平台方案
+🤖 DeepSeek/通义/文心等国产模型示例
+📚 15+ 框架对比（附中文文档）
+
+每天早中晚自动爬取更新，你看到的永远是最新的～
+
+如果觉得有用，欢迎 Star ⭐ 和分享给需要的朋友！
+github.com/happydog-intj/awesome-chinese-ai-agents
+
+#开源项目 #AIAgent #AI开发 #DeepSeek #程序员 #LLM #人工智能 #学习资源
+---
+AI Agent 项目质量良莠不齐，怎么筛选靠谱的？🔍
+整理了半年资源库，分享一下我的筛选标准：
+
+❌ 直接 Pass 的项目：
+- 停更超过 6 个月
+- 没有 README 或文档全是英文
+- 只是对其他项目的浅层封装
+- Star 数虚高但 Issue 无人回复
+
+✅ 值得收藏的项目特征：
+- 有真实部署案例或用户反馈
+- 维护者活跃，Issue 有回复
+- 有中文文档或社区
+- 解决了特定的实际问题
+
+按这个标准筛下来，100 个里能留下来的不超过 30%。
+
+我的资源库就是按这个逻辑维护的，欢迎参考：
+github.com/happydog-intj/awesome-chinese-ai-agents
+
+#AI开发 #开源 #程序员 #AIAgent #技术选型 #避坑指南

@@ -1,0 +1,51 @@
+最近在做 AI Agent 项目，深刻感受到中文生态的痛点：文档要么是机翻、要么是英文原版，实际接入微信/飞书这些国内平台时几乎找不到可用的参考。
+
+所以我整理了一个专门面向中文开发者的资源库「Awesome Chinese AI Agents」，收录 100+ 真实可用的中文场景项目。内容涵盖主流 Agent 框架对比（附中文文档链接）、国产大模型（DeepSeek/通义/文心）接入代码示例，以及微信、企业微信、飞书、钉钉等平台的集成方案。
+
+每天自动收集更新，不用担心过时。欢迎 Star 一起维护：
+https://github.com/happydog-intj/awesome-chinese-ai-agents
+---
+关于 AI Agent 框架选型，我整理了一些实际踩坑后的思考。
+
+LangChain 生态成熟、文档多，但中文支持和国产模型兼容性一般；AutoGen 适合多智能体协作场景；Dify 对非技术背景用户更友好，有可视化界面；CrewAI 上手快，但定制化程度有限。
+
+国内框架里，百炼（阿里云）和 AgentScope 在接入国产模型方面有天然优势。
+
+选框架没有绝对最优解，关键看你的场景。我把这些对比和配套资源都整理到了这个资源库里，持续更新中：
+https://github.com/happydog-intj/awesome-chinese-ai-agents
+---
+2026 年，国内 AI Agent 落地场景越来越清晰了。
+
+从我观察到的项目来看，最活跃的方向有几个：客服/销售对话 Agent（接入企业微信或飞书）、代码审计与辅助开发 Agent、舆情监控与报告自动生成，以及 RPA 结合 LLM 的流程自动化。
+
+共同点是：都在解决真实业务问题，而不是 demo 展示。国产大模型的成本优势也让这些方案具备了商业可行性。
+
+我整理的中文 AI Agent 资源库收录了这些方向的代表性开源项目，方便参考：
+https://github.com/happydog-intj/awesome-chinese-ai-agents
+---
+说一个 AI Agent 开发者常见的误区：把「接入大模型」等同于「做好了 Agent」。
+
+实际上，大模型只是 Agent 的推理核心，真正决定产品体验的是：工具调用的可靠性、上下文管理策略、错误重试与回退机制，以及与业务系统的集成深度。
+
+国内场景还有额外挑战——微信的接口限制、企业微信的审批流程、飞书的 webhook 格式……这些细节不在任何英文文档里。
+
+我在「Awesome Chinese AI Agents」里专门收录了处理这些细节的实战项目，有需要可以看看：
+https://github.com/happydog-intj/awesome-chinese-ai-agents
+---
+DeepSeek 的出现确实改变了很多事情。
+
+成本降下来之后，很多之前"做不起"的 Agent 场景变得可行了：给每个用户单独维护一个持久化 Agent、在对话中频繁调用大模型做判断、跑复杂的多步推理链……
+
+但随之而来的问题是，如何把 DeepSeek 稳定地接入现有系统？官方文档不够细，社区案例又太分散。
+
+「Awesome Chinese AI Agents」整理了 DeepSeek 及其他国产模型的接入代码和最佳实践，每天更新：
+https://github.com/happydog-intj/awesome-chinese-ai-agents
+---
+整理「Awesome Chinese AI Agents」这个资源库快半年了，分享一些观察。
+
+中文 AI Agent 开源生态比一年前活跃很多，但质量参差不齐——很多项目停更、文档缺失，或者只是对英文项目的浅层封装。真正在生产环境跑、有真实用户的项目其实并不多。
+
+所以我在收录时会优先考虑：有活跃维护、有中文文档、有实际部署案例的项目。目前收录了 100+ 个，还在持续筛选更新。
+
+如果你有好的项目推荐，欢迎提 PR：
+https://github.com/happydog-intj/awesome-chinese-ai-agents

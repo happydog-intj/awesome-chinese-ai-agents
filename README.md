@@ -32,15 +32,17 @@
 
 ## 📊 资源统计
 
-- 🔥 *Agent Harness*: 6+ (Claude Code、Codex、Gemini CLI 等) **🆕**
-- 🔧 *AI Agent 框架*: 15+
+- 🔥 *Agent Harness*: 8+ (Claude Code、Codex、Gemini CLI、Deer-Flow 等) **🆕**
+- 🔧 *AI Agent 框架*: 18+
 - 🤖 *中文 LLM*: 10+
-- 🛠️ *开发工具*: 25+
+- 🛠️ *开发工具*: 30+
 - 💬 *平台集成*: 8+ (微信、抖音、小红书等)
 - 📚 *学习资源*: 20+
 - 🎨 *提示词模板*: 15+
 - 📊 *实战案例*: 5+
 - 🔌 *中国服务 API*: 30+
+
+> 🗓️ **最近更新**：2026-04-22 — 新增字节跳动 Deer-Flow、Gemini CLI、LobeHub Agent 协作平台等最新资源
 
 ---
 
@@ -291,6 +293,18 @@ ollama run qwen  # 运行通义千问模型
   - 模型管理功能
   - 开发者友好的许可证
 
+- **[Deer-Flow](https://github.com/bytedance/deer-flow)** 🆕 - 字节跳动开源 SuperAgent 框架 (63K+ ⭐)
+  - 长程任务：可执行需要数分钟至数小时的复杂任务
+  - 集成沙箱隔离环境、长期记忆、多种工具调用
+  - 支持子 Agent 并行协作与消息网关
+  - 适合研究、编码、内容创作等复杂场景
+
+- **[LobeHub](https://github.com/lobehub/lobehub)** 🆕 - 新一代多 Agent 协作平台 (75K+ ⭐)
+  - 支持多 Agent 团队设计和协作
+  - 以 Agent 为工作交互单元
+  - 集成 AI 市场，可发现和复用 Agent 团队
+  - 支持中英文界面
+
 - **[Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** - 基于 LangChain 的知识库问答应用
   - 完整的中文支持
   - 本地知识库问答
@@ -321,11 +335,13 @@ ollama run qwen  # 运行通义千问模型
 
 | 框架 | 上手难度 | 中文支持 | 社区活跃度 | 适用场景 | Star数 |
 |------|---------|---------|----------|---------|--------|
-| *LangChain* | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 通用开发 | 100K+ |
+| *LangChain* | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 通用开发 | 135K+ |
 | *MetaGPT* | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 多Agent协作 | 45K+ |
 | *AutoGen* | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 对话系统 | 35K+ |
 | *万物 Wanwu* | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | 企业应用 | 3.9K |
-| *Dify* | ⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 可视化开发 | 60K+ |
+| *Dify* | ⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 可视化开发 | 138K+ |
+| *Deer-Flow* 🆕 | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 长程复杂任务 | 63K+ |
+| *LobeHub* 🆕 | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 多Agent协作平台 | 75K+ |
 
 ---
 
