@@ -32,17 +32,17 @@
 
 ## 📊 资源统计
 
-- 🔥 *Agent Harness*: 8+ (Claude Code、Codex、Gemini CLI、Deer-Flow 等) **🆕**
-- 🔧 *AI Agent 框架*: 18+
+- 🔥 *Agent Harness*: 10+ (Claude Code、Codex、Gemini CLI、Deer-Flow 等) **🆕**
+- 🔧 *AI Agent 框架*: 22+ **🆕**
 - 🤖 *中文 LLM*: 10+
-- 🛠️ *开发工具*: 30+
+- 🛠️ *开发工具*: 35+ **🆕**
 - 💬 *平台集成*: 8+ (微信、抖音、小红书等)
-- 📚 *学习资源*: 20+
+- 📚 *学习资源*: 25+ **🆕**
 - 🎨 *提示词模板*: 15+
 - 📊 *实战案例*: 5+
 - 🔌 *中国服务 API*: 30+
 
-> 🗓️ **最近更新**：2026-04-22 — 新增字节跳动 Deer-Flow、Gemini CLI、LobeHub Agent 协作平台等最新资源
+> 🗓️ **最近更新**：2026-04-26 — 新增 OpenAI Agents Python、Google ADK、腾讯 WeKnora、HKUDS RAG-Anything、鱼皮 AI 指南等 13 个优质项目
 
 ---
 
@@ -305,6 +305,26 @@ ollama run qwen  # 运行通义千问模型
   - 集成 AI 市场，可发现和复用 Agent 团队
   - 支持中英文界面
 
+- **[openai/openai-agents-python](https://github.com/openai/openai-agents-python)** 🆕 - OpenAI 官方 Agent 框架 (25K+ ⭐)
+  - OpenAI 官方出品，轻量但功能完整的多 Agent 框架
+  - 支持 handoff（Agent 切换）、guardrails（护栏）、tracing（链路追踪）
+  - 生产就绪，与 GPT 系列深度集成
+
+- **[google/adk-python](https://github.com/google/adk-python)** 🆕 - Google Agent Development Kit (19K+ ⭐)
+  - Google 官方 Agent 开发套件，代码优先、模型无关
+  - 内置评估、安全护栏和多 Agent 编排能力
+  - 与 Gemini CLI 协同构建完整 Google AI 生态
+
+- **[HKUDS/RAG-Anything](https://github.com/HKUDS/RAG-Anything)** 🆕 - 全能 RAG 框架（香港大学）(18.6K+ ⭐)
+  - 支持文本、图像、表格、音频等多模态文档检索
+  - 统一检索接口，大幅简化 RAG 管道构建
+  - 学术团队背景，论文级别的方法论落地
+
+- **[Tencent/WeKnora](https://github.com/Tencent/WeKnora)** 🆕 - 腾讯企业级 RAG 知识库平台 (14K+ ⭐)
+  - 腾讯出品，基于深度文档理解的语义检索平台
+  - 支持上下文感知问答，企业级可靠性
+  - RAG 范式优化，适合大规模知识库场景
+
 - **[Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** - 基于 LangChain 的知识库问答应用
   - 完整的中文支持
   - 本地知识库问答
@@ -330,6 +350,21 @@ ollama run qwen  # 运行通义千问模型
 - **[Chinese-LangChain](https://github.com/yanqiangmiffy/Chinese-LangChain)** - 中文 LangChain 项目集合 (2.8K+ ⭐)
   - 中文 LLM 应用案例
   - 实战项目代码
+
+- **[shareAI-lab/learn-claude-code](https://github.com/shareAI-lab/learn-claude-code)** 🆕 - 中文 Agent Harness 实战教程 (56K+ ⭐)
+  - 中国团队出品："Bash is all you need"
+  - 从零仿造 Claude Code 风格的终端 Agent Harness
+  - 中文注释详尽，适合国内开发者学习 Agent 底层原理
+
+- **[liyupi/ai-guide](https://github.com/liyupi/ai-guide)** 🆕 - 程序员鱼皮 AI 资源大全 (12K+ ⭐)
+  - 中国知名开发者鱼皮出品，覆盖 OpenClaw/Vibe Coding 全生态
+  - DeepSeek/GPT/Gemini/Claude 玩法 + Prompt 大全
+  - 含 Agent Skills/RAG/MCP/A2A 知识百科，持续更新
+
+- **[ModelEngine-Group/nexent](https://github.com/ModelEngine-Group/nexent)** 🆕 - 零代码 Agent 自动生成平台 (4.3K+ ⭐)
+  - 基于 Harness Engineering 原则的零代码 Agent 平台
+  - 统一工具、技能、记忆和编排，内置约束和反馈循环
+  - 自动生成生产级 AI Agent，无需编写代码
 
 ### 框架对比
 
@@ -1696,12 +1731,12 @@ A: 成本优化技巧:
 
 ## 📊 项目统计
 
-- 📚 收录资源: **160+**
-- 🔥 Agent Harness: **6+** 🆕
-- 🛠️ 开发工具: **30+**
+- 📚 收录资源: **175+** 🆕
+- 🔥 Agent Harness: **10+** 🆕
+- 🛠️ 开发工具: **35+** 🆕
 - 🎯 Agent技能: **80+**
 - 💬 平台集成: **15+**
-- 📖 教程文档: **50+**
+- 📖 教程文档: **55+** 🆕
 - 🔌 API集成: **25+**
 
 ---

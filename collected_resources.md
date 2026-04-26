@@ -448,3 +448,87 @@
    - https://github.com/1Panel-dev/MaxKB
    - 开源企业级智能体平台
    - 强大易用，适合企业知识库场景
+
+## 2026年新增资源 - 2026-04-26
+
+### 国际主流框架新增（高星推荐）
+
+1. **openai/openai-agents-python** (25,149 stars) - OpenAI 官方 Agent 框架
+   - https://github.com/openai/openai-agents-python
+   - OpenAI 官方出品的轻量多 Agent 工作流框架
+   - 支持 handoff、guardrails、tracing，生产就绪
+   - 文档完善，适合与 GPT 系列深度集成
+
+2. **google/adk-python** (19,271 stars) - Google Agent Development Kit
+   - https://github.com/google/adk-python
+   - Google 官方 Python Agent 开发工具包
+   - 代码优先、模型无关的 Agent 构建框架
+   - 内置评估、安全护栏和多 Agent 编排
+
+3. **HKUDS/RAG-Anything** (18,666 stars) - 香港大学全能 RAG 框架
+   - https://github.com/HKUDS/RAG-Anything
+   - 来自香港大学数据科学系的全能 RAG 框架
+   - 支持文本、图像、表格、音频等多模态文档
+   - 统一检索接口，大幅简化 RAG 管道构建
+
+4. **Tencent/WeKnora** (14,004 stars) - 腾讯开源 RAG 知识库平台
+   - https://github.com/Tencent/WeKnora
+   - 腾讯出品的企业级文档智能检索平台
+   - 基于 LLM 的深度文档理解与语义检索
+   - RAG 范式，支持上下文感知的问答场景
+
+5. **hesreallyhim/awesome-claude-code** (41,032 stars) - Claude Code 资源精选
+   - https://github.com/hesreallyhim/awesome-claude-code
+   - 精选 Claude Code 技能、hooks、slash-commands 合集
+   - 涵盖 Agent Orchestrators、应用和插件
+   - 广泛被 Agent Harness 开发者参考
+
+6. **affaan-m/everything-claude-code** (166,985 stars) - Agent Harness 性能优化大全
+   - https://github.com/affaan-m/everything-claude-code
+   - Agent Harness 性能优化系统，涵盖技能/本能/记忆/安全
+   - 支持 Claude Code、Codex、Opencode、Cursor 等多种 Harness
+   - Research-first 开发方法论，社区超高活跃度
+
+7. **thedotmack/claude-mem** (67,509 stars) - Claude Code 持久化记忆插件
+   - https://github.com/thedotmack/claude-mem
+   - Claude Code 插件：自动捕获编码会话中的上下文
+   - 使用 Claude agent-sdk 压缩，注入未来会话
+   - 解决 Agent 无状态的核心痛点
+
+8. **code-yeongyu/oh-my-openagent** (54,143 stars) - 极速 Agent Harness
+   - https://github.com/code-yeongyu/oh-my-openagent
+   - 前身为 oh-my-opencode，定位为"最佳 Agent Harness"
+   - TypeScript 编写，快速、Pythonic 风格
+   - 终端原生体验，开发者社区活跃
+
+### 中文生态新项目
+
+9. **shareAI-lab/learn-claude-code** (56,467 stars) - 中文 Claude Code 实战教程
+   - https://github.com/shareAI-lab/learn-claude-code
+   - 中国团队出品："Bash is all you need"
+   - 从零到一仿造 Claude Code 风格的 Agent Harness
+   - 中文注释，适合国内开发者学习 Agent 原理
+
+10. **liyupi/ai-guide** (12,476 stars) - 程序员鱼皮 AI 资源大全
+    - https://github.com/liyupi/ai-guide
+    - 程序员鱼皮出品，覆盖 OpenClaw/大模型/Vibe Coding 全生态
+    - 含 DeepSeek/GPT/Gemini/Claude 玩法 + Prompt 大全
+    - AI 知识百科（Agent Skills/RAG/MCP/A2A）+ 编程教程
+
+11. **casdoor/casdoor** (13,481 stars) - 开源 Agent 身份认证网关
+    - https://github.com/casdoor/casdoor
+    - Agent-first IAM + LLM MCP & Agent 网关与认证服务器
+    - 支持 OAuth/OIDC/SAML/LDAP/MFA/Face ID 等全协议
+    - 支持 OpenClaw、MCP、Google Workspace、Azure AD 集成
+
+12. **casibase/casibase** (4,502 stars) - AI Cloud OS（支持 MCP/A2A）
+    - https://github.com/casibase/casibase
+    - 开源企业级 AI 知识库 + MCP/A2A 管理平台
+    - 含管理 UI、用户管理、单点登录（SSO）
+    - 支持 ChatGPT/Claude/Llama/Ollama 等 10+ 模型
+
+13. **ModelEngine-Group/nexent** (4,360 stars) - 零代码 Agent 自动生成平台
+    - https://github.com/ModelEngine-Group/nexent
+    - 基于 Harness Engineering 原则的零代码 Agent 生成平台
+    - 统一工具、技能、记忆和编排，内置约束和反馈循环
+    - 自动生成生产级 AI Agent，无需编写代码
