@@ -32,23 +32,23 @@
 
 ## 📊 资源统计
 
-- 🔥 *Agent Harness*: 10+ (Claude Code、Codex、Gemini CLI、Deer-Flow 等) **🆕**
-- 🔧 *AI Agent 框架*: 22+ **🆕**
+- 🔥 *Agent Harness*: 10+ (Claude Code、Codex、Gemini CLI、Hermes Agent 等) **🆕**
+- 🔧 *AI Agent 框架*: 26+ **🆕**
 - 🤖 *中文 LLM*: 10+
-- 🛠️ *开发工具*: 35+ **🆕**
-- 💬 *平台集成*: 8+ (微信、抖音、小红书等)
-- 📚 *学习资源*: 25+ **🆕**
+- 🛠️ *开发工具*: 38+ **🆕**
+- 💬 *平台集成*: 10+ (微信、飞书、抖音、小红书等) **🆕**
+- 📚 *学习资源*: 28+ **🆕**
 - 🎨 *提示词模板*: 15+
-- 📊 *实战案例*: 5+
+- 📊 *实战案例*: 6+ **🆕**
 - 🔌 *中国服务 API*: 30+
 
-> 🗓️ **最近更新**：2026-04-26 — 新增 OpenAI Agents Python、Google ADK、腾讯 WeKnora、HKUDS RAG-Anything、鱼皮 AI 指南等 13 个优质项目
+> 🗓️ **最近更新**：2026-05-01 - 新增 Hermes Agent、nanobot、browser-use、AstrBot、TradingAgents、hello-agents 等 8 个热门项目
 
 ---
 
 ## 📖 目录
 
-- [🔥 Agent Harness —— 让 AI 直接写代码](#-agent-harness--让-ai-直接写代码) ⬅️ **新增置顶**
+- [🔥 Agent Harness -- 让 AI 直接写代码](#-agent-harness--让-ai-直接写代码) ⬅️ **新增置顶**
 - [🚀 快速开始](#-快速开始)
 - [🌟 精选项目](#-精选项目)
 - [🛠️ 开发工具](#️-开发工具)
@@ -69,16 +69,16 @@
 
 ---
 
-## 🔥 Agent Harness —— 让 AI 直接写代码
+## 🔥 Agent Harness -- 让 AI 直接写代码
 
 > **什么是 Agent Harness？**
-> Harness（执行框架）是让 AI Agent **直接操控编码工具**的调度层 —— 不只是生成代码建议，而是真正打开编辑器、读写文件、跑测试、提 PR，全流程自动完成。
+> Harness（执行框架）是让 AI Agent **直接操控编码工具**的调度层 -- 不只是生成代码建议，而是真正打开编辑器、读写文件、跑测试、提 PR，全流程自动完成。
 
 ### 🎯 核心概念
 
 | 概念 | 说明 |
 |------|------|
-| **Harness** | Agent 的"身体"——与代码工具（Claude Code、Codex、Gemini CLI 等）交互的执行层 |
+| **Harness** | Agent 的"身体"--与代码工具（Claude Code、Codex、Gemini CLI 等）交互的执行层 |
 | **ACP 协议** | Agent Control Protocol，OpenClaw 用于调度 Harness 的标准接口 |
 | **Coding Agent** | 在 Harness 中运行的代码智能体，可自主规划、编写、调试代码 |
 | **Session** | 每次 Harness 调用的独立上下文，支持一次性（run）和持久（session）两种模式 |
@@ -92,7 +92,8 @@
 | **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | Gemini 2.5 Pro | 大上下文代码理解 | ✅ | ✅ 开源 |
 | **[Aider](https://github.com/paul-gauthier/aider)** | 多模型 | 对话式代码修改、Git 集成 | ✅ | ✅ 开源 |
 | **[Cursor](https://cursor.sh/)** | 多模型 | IDE 级别 AI 辅助 | ✅ | ❌ 商业 |
-| **[OpenCode](https://github.com/opencode-ai/opencode)** | 多模型 | 终端原生、轻量 | ✅ | ✅ 开源 |
+| **[OpenCode](https://github.com/anomalyco/opencode)** | 多模型 | 终端原生、轻量 (152K+ ⭐) | ✅ | ✅ 开源 |
+| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | 多模型 | 自主规划、持久记忆 (127K+ ⭐) | ✅ 中文友好 | ✅ 开源 |
 
 ### ⚡ OpenClaw ACP Harness
 
@@ -106,11 +107,11 @@
 ```
 
 **核心特性：**
-- 🔄 **多 Harness 并行调度** — 同时启动多个 Coding Agent 处理不同子任务
-- 📌 **Thread 绑定** — Discord/Slack 频道中每个对话线程独立维护一个 Agent Session
-- 🔁 **Push 完成通知** — 任务完成后主动推送结果，无需轮询
-- 🔒 **权限隔离** — `bypassPermissions` 模式下 Agent 可全自动操作，无需人工确认
-- 🌐 **中文指令透传** — 直接用中文描述任务，OpenClaw 自动适配各 Harness 协议
+- 🔄 **多 Harness 并行调度** - 同时启动多个 Coding Agent 处理不同子任务
+- 📌 **Thread 绑定** - Discord/Slack 频道中每个对话线程独立维护一个 Agent Session
+- 🔁 **Push 完成通知** - 任务完成后主动推送结果，无需轮询
+- 🔒 **权限隔离** - `bypassPermissions` 模式下 Agent 可全自动操作，无需人工确认
+- 🌐 **中文指令透传** - 直接用中文描述任务，OpenClaw 自动适配各 Harness 协议
 
 **快速配置示例：**
 
@@ -325,6 +326,24 @@ ollama run qwen  # 运行通义千问模型
   - 支持上下文感知问答，企业级可靠性
   - RAG 范式优化，适合大规模知识库场景
 
+- **[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)** 🆕 - 新一代开源 AI Agent 框架 (127K+ ⭐)
+  - 全新架构设计，与用户共同成长的 Agent
+  - 支持持久记忆、技能学习和自主规划
+  - 多模型兼容，可接入 OpenAI、Claude、Qwen 等
+  - 活跃社区，Hermes 系列在中文圈广受关注
+
+- **[HKUDS/nanobot](https://github.com/HKUDS/nanobot)** 🆕 - 超轻量个人 AI Agent（香港大学）(41K+ ⭐)
+  - 极简架构，单机部署成本极低
+  - 支持个人知识库、任务自动化
+  - 与 RAG-Anything 同团队出品，中文优化良好
+  - 适合个人开发者快速落地
+
+- **[mem0ai/mem0](https://github.com/mem0ai/mem0)** 🆕 - AI Agent 通用记忆层 (54K+ ⭐)
+  - 为 Agent 提供持久化、个性化的跨会话记忆
+  - 自动学习用户偏好，支持记忆增删改查
+  - 可插拔架构，与 LangChain、AutoGen 无缝集成
+  - 多语言支持，中文记忆效果良好
+
 - **[Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** - 基于 LangChain 的知识库问答应用
   - 完整的中文支持
   - 本地知识库问答
@@ -393,11 +412,23 @@ ollama run qwen  # 运行通义千问模型
   - 简单易用的 API
   - 适合团队协作场景
   - 支持中文场景
- 
+
 - **[DD-OS](https://github.com/FatBy/DD-OS)** - 基于事件驱动与 Nexus 记忆机制的 AI Agent 操作系统
   - 可视化的节点，开箱即用
   - V3 状态机架构配合 Nexus 分层记忆，执行更稳定
-  - 独创“模拟城市”等轴测 UI，全景监控 Agent 任务流
+  - 独创"模拟城市"等轴测 UI，全景监控 Agent 任务流
+
+- **[browser-use/browser-use](https://github.com/browser-use/browser-use)** 🆕 - 让 AI Agent 直接操控浏览器 (91K+ ⭐)
+  - 一行代码让 Agent 访问任意网页、填表、点击
+  - 基于 Playwright，支持视觉+DOM 双模式理解
+  - 兼容 OpenAI、Claude、通义千问等主流模型
+  - 国内淘宝、微博、小红书等场景已有实测案例
+
+- **[ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)** 🆕 - Chrome 官方 MCP 工具（Google 出品）(37K+ ⭐)
+  - Google 官方将 Chrome DevTools 接入 MCP 协议
+  - 允许 Coding Agent 直接调试页面、检查 Network、查看 Console
+  - 配合 Claude Code / Codex 实现前端自动化调试
+  - 无需插件，直接对接已打开的 Chrome 实例
 
 ### RAG 与知识库
 
@@ -681,10 +712,11 @@ ollama run qwen  # 运行通义千问模型
   - TypeScript/JavaScript
   - 活跃的社区支持
 
-- **[chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)** - 基于 ChatGPT 的微信机器人
-  - 开箱即用
-  - 支持多种 LLM
-  - 插件系统
+- **[CowAgent (chatgpt-on-wechat)](https://github.com/zhayujie/CowAgent)** 🆕 - 超级 AI 助理，已升级为全功能 Agent (43K+ ⭐)
+  - 从微信机器人升级为具备自主思考和任务规划的 AI 助理
+  - 支持微信、飞书、钉钉、企微、QQ、公众号等全平台
+  - 可选 DeepSeek/OpenAI/Claude/Gemini/Qwen/GLM 等模型
+  - 支持长期记忆、知识库、技能创建与执行
 
 - **[wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt)** - 微信 + ChatGPT 集成
   - 简单易用
@@ -700,6 +732,12 @@ ollama run qwen  # 运行通义千问模型
   - RESTful API
   - 易于集成
   - 支持企业微信
+
+- **[AstrBotDevs/AstrBot](https://github.com/AstrBotDevs/AstrBot)** 🆕 - 多平台 AI Agent 助理 (31K+ ⭐)
+  - 支持微信、QQ、飞书、Telegram、Discord 等多平台
+  - 插件系统丰富，支持自定义 AI 技能
+  - 内置对话管理、任务调度、知识库
+  - 可作为 OpenClaw 的轻量替代方案，中文文档完善
 
 ### 即时通讯
 
@@ -723,6 +761,18 @@ ollama run qwen  # 运行通义千问模型
 ## 📚 中文文档与教程
 
 ### 优质学习资源
+
+- **[datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents)** 🆕 - 《从零开始构建智能体》(42K+ ⭐)
+  - Datawhale 出品，系统性中文 AI Agent 教程
+  - 从原理到实战，覆盖 Agent 完整知识体系
+  - 含代码示例、图解和实验环境，零基础友好
+  - 持续更新，社区活跃，配套视频课程
+
+- **[Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)** 🆕 - 100+ 可运行 AI Agent & RAG 应用合集 (108K+ ⭐)
+  - 涵盖金融、医疗、教育、代码等多个垂直场景
+  - 每个项目均可 clone 后直接运行，学习成本极低
+  - 持续新增中文友好的应用示例
+  - 配套详细文档和视频教程
 
 - **[LangChain-Chinese-Getting-Started-Guide](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide)** (8.8K+ ⭐)
   - LangChain 中文入门教程
@@ -1001,7 +1051,29 @@ ollama run qwen  # 运行通义千问模型
 
 ---
 
-### 案例3: 自动化SEO优化工具
+### 案例3: 金融多 Agent 投研系统 🆕
+
+**场景**: 多 Agent 协作完成 A/H/美股的实时分析与交易决策
+
+**参考项目**: **[TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)** (58K+ ⭐)
+
+**技术栈**:
+- LangGraph (多 Agent 工作流编排)
+- GPT-4o / Claude (分析决策)
+- 多数据源（行情+新闻+财报）
+- PostgreSQL / Redis (数据持久化)
+
+**Agent 分工**:
+- 数据采集 Agent — 实时获取行情和新闻
+- 分析 Agent — 技术面+基本面综合研判
+- 风控 Agent — Kelly 准则仓位管理
+- 执行 Agent — 下单与持仓管理
+
+**代码**: [查看 TradingAgents 完整实现](https://github.com/TauricResearch/TradingAgents)
+
+---
+
+### 案例4: 自动化SEO优化工具
 
 **场景**: SEO团队需要批量优化网站内容
 
