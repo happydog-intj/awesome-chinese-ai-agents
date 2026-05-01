@@ -651,6 +651,8 @@ ollama run qwen  # 运行通义千问模型
   - A/B测试分析
   - ROI计算
 
+- **[Toprank](https://github.com/nowork-studio/toprank)** - 开源 MIT Claude Code 插件，内置 9 个 SEO 与 Google Ads 技能；连接 Google Search Console、PageSpeed Insights 和 Google Ads API，可直接推动元标签改写、JSON-LD Schema 生成、关键词出价调整和 CMS 内容发布等优化动作
+
 - **内容营销**
   - 爆款内容分析
   - 选题推荐
