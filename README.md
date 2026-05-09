@@ -1842,6 +1842,7 @@ A: 成本优化技巧:
 - [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - 英文版AI Agent资源
 - [Awesome LLM Apps](https://github.com/Shubhamsaboo/awesome-llm-apps) - LLM应用集合
 - [Awesome ChatGPT Prompts ZH](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) - 中文ChatGPT提示词
+- [Awesome AI Startups](https://github.com/nowork-studio/awesome-ai-startups) - 独立开发者创建的 AI 创业产品精选列表，涵盖自筹资金、种子轮前和天使轮融资的产品。
 
 ---
 
