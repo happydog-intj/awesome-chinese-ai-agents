@@ -569,6 +569,8 @@ ollama run qwen  # 运行通义千问模型
 
 ### 中文特色技能
 
+- **[Aura-huang/agency-agents-cn](https://github.com/Aura-huang/agency-agents-cn)** - 一人公司技能库中国版。针对中国市场（微信、小红书、抖音、B站、知乎等）深度优化的 15+ 原创 Agent 角色，一人创业者专属。
+
 #### 社交媒体自动化
 
 - **微信生态**
